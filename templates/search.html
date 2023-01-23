@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2> Search </h2>
+
+
+<form id="formId" action=" " method="post">
+    <p>
+        {{form.jobTitle.label}} <br>
+        {{form.jobTitle(size=30)}}
+    </p>
+    <p>
+        {{form.location.label}} <br>
+        {{form.location(size=30)}}
+    </p>
+    <p>Skills</p>
+    <div class="ui fluid multiple search selection dropdown" id="choices">
+        <input type="hidden" name="choices" id="inputs">
+        <div class="default text">Select</div>
+    </div>
+    <button onclick="sendData()" class="btn btn-lg btn-primary btn-block" type="button">{{form.submit()}}</button>
+</form>
+<script>
+    function sendData() {
+        var skills = $( "#inputs" ).val() || [];
+        $.ajax({
+            type: "POST",
+            url: "/",
+            data: JSON.stringify({'skills': skills}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+    }
+    </script>
+
+{% endblock %}
