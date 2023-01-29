@@ -1,11 +1,9 @@
-import asyncio
 from flask import Flask, render_template, request
-
 from backend import get_jobs
 from forms import SearchForm
 from typing import List
 from job import Job
-from fetch import get_job_titles
+
 
 
 skills_list = []

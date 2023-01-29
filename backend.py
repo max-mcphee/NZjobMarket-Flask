@@ -1,11 +1,5 @@
 import mysql.connector
-import asyncio
-from bs4 import BeautifulSoup
-from typing import List
 from job import Job
-import requests
-from fetch import get_job_titles
-
 
 def get_jobs(title):
     db = mysql.connector.connect(
