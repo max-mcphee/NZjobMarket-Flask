@@ -4,8 +4,5 @@
 
 {% for job in joblist %}
     <p><a href={{job.link}}>{{job.name}}-{{job.location}}</a></p>
-    {% for skill in job.skills %}
-        <p>{{skill.skill}}-{{skill.found}}</p>
-    {% endfor %}
 {% endfor %}
 {% endblock %}
