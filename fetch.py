@@ -35,5 +35,5 @@ async def get_job_titles(links,skills):
             job_location.append(description.find('span', class_='yvsb870 _14uh9944u _1cshjhy0 _1cshjhy1 _1cshjhy21 '
                                                                 '_1d0g9qk4 _1cshjhya').text)
         for x in range(len(job_titles)):
-            joblist.append(Job(job_titles.pop(), links.pop(),job_location.pop(),list.pop()))
+            joblist.append(Job(job_titles.pop(), links.pop(),job_location.pop(),list.pop(),0))
     return joblist

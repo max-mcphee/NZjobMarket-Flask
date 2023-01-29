@@ -1,9 +1,9 @@
 import asyncio
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 from forms import SearchForm
 from bs4 import BeautifulSoup
 from typing import List
-from job import Job, Skill
+from job import Job
 import requests
 from fetch import get_job_titles
 
@@ -44,4 +44,4 @@ def search():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run()

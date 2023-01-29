@@ -5,8 +5,9 @@ class Skill:
 
 
 class Job:
-    def __init__(self, name, link, location, skills):
+    def __init__(self, name, link, location, skills, date):
         self.name = name
         self.link = link
         self.location = location
         self.skills = skills
+        self.date = date
