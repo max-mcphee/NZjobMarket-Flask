@@ -3,9 +3,9 @@ from job import Job
 
 def get_jobs(title):
     db = mysql.connector.connect(
-        host="nzjobsinstance.ciectykagwlh.ap-southeast-2.rds.amazonaws.com",
-        user="admin",
-        passwd="adminpassword",
+        host="",
+        user="",
+        passwd="",
         database="jobsDB"
     )
     job_list = []
