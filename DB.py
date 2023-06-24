@@ -8,9 +8,9 @@ from job import Job
 import requests
 from fetch import get_job_titles
 db = mysql.connector.connect(
-    host="nzjobsinstance.ciectykagwlh.ap-southeast-2.rds.amazonaws.com",
-    user="admin",
-    passwd="adminpassword",
+    host="",
+    user="",
+    passwd="",
     database="jobsDB"
 )
 
